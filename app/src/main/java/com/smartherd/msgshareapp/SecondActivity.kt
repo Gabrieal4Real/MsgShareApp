@@ -1,8 +1,7 @@
 package com.smartherd.msgshareapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
@@ -13,16 +12,10 @@ class SecondActivity : AppCompatActivity() {
         val bundle: Bundle? = intent.extras
         val message =  bundle!!.getString("user_name")
 
-        for(i in 0..5)
-        {
-            println(message + i)
-            println(message + i)
-            println(message + i)
-            println(message + i)
+        for (i in 0..5) {
             println(message + i)
             nameshowtext.text = "Hello " + message
             //hello
         }
-        println(message)
     }
 }
