@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
             //Code
             Log.d("", "Toast Button Clicked!")
 
-            Toast.makeText(this,"Toast Button Clicked!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Toast Button Clicked!", Toast.LENGTH_SHORT).show()
         }
 
         nextactivitybutton.setOnClickListener {
@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
 
             val message: String = edittextnextactivity.text.toString()
 
-            if(message.equals(""))
-            {
+            if (message.equals("")) {
                 Toast.makeText(this, "Please Enter Message 1", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Welcome " + message, Toast.LENGTH_SHORT).show()

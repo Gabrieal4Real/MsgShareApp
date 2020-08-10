@@ -10,7 +10,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         val bundle: Bundle? = intent.extras
-        val message =  bundle!!.getString("user_name")
+        val message = bundle!!.getString("user_name")
 
         for (i in 0..5) {
             println(message + i)
