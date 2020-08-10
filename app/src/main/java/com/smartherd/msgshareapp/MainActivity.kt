@@ -48,8 +48,17 @@ class MainActivity : AppCompatActivity() {
                 intent.type = "text/plain"
                 startActivity(Intent.createChooser(intent, "Share to: "))
             }
+        }
 
+        recyclerviewbutton.setOnClickListener {
 
+            val message: String = edittextnextactivity.text.toString()
+            if (message.equals("")) {
+                Toast.makeText(this, "Please Enter Message 3", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, HobbiesActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }
