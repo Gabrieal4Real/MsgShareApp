@@ -1,7 +1,8 @@
-package com.smartherd.msgshareapp
+package com.smartherd.msgshareapp.Activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.smartherd.msgshareapp.R
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
