@@ -16,6 +16,10 @@ class SecondActivity : AppCompatActivity() {
         for(i in 0..5)
         {
             println(message + i)
+            println(message + i)
+            println(message + i)
+            println(message + i)
+            println(message + i)
             nameshowtext.text = "Hello " + message
             //hello
         }
