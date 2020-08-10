@@ -3,9 +3,9 @@ package com.smartherd.msgshareapp.Activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.smartherd.msgshareapp.HobbiesAdapter
+import com.smartherd.msgshareapp.Adapters.HobbiesAdapter
+import com.smartherd.msgshareapp.Models.Supplier
 import com.smartherd.msgshareapp.R
-import com.smartherd.msgshareapp.Supplier
 import kotlinx.android.synthetic.main.activity_hobbies.*
 
 class HobbiesActivity : AppCompatActivity() {
