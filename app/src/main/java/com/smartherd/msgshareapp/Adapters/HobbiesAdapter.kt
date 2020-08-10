@@ -11,7 +11,7 @@ import com.smartherd.msgshareapp.Models.Hobby
 import com.smartherd.msgshareapp.R
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) :
+class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) :
     RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var currentHobby: Hobby? = null

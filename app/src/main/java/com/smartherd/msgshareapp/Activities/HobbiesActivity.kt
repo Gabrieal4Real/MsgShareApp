@@ -13,11 +13,13 @@ class HobbiesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hobbies)
 
+        setupRecyclerView()
+    }
+
+    private fun setupRecyclerView() {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerview1.layoutManager = layoutManager
-
-
         val adapter = HobbiesAdapter(
             this,
             Supplier.hobbies
