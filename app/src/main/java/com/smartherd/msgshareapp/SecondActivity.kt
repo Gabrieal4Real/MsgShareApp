@@ -23,5 +23,6 @@ class SecondActivity : AppCompatActivity() {
             nameshowtext.text = "Hello " + message
             //hello
         }
+        println(message)
     }
 }
