@@ -3,6 +3,7 @@ package com.smartherd.msgshareapp.Activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.smartherd.msgshareapp.R
 import com.smartherd.msgshareapp.showToast
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             val message: String = edittextnextactivity.text.toString()
 
             if (message.equals("")) {
-                showToast("Please Enter Message 1")
+                showToast("Please Enter Message 1", Toast.LENGTH_LONG)
             } else {
                 showToast("Welcome " + message)
                 val intent = Intent(this, SecondActivity::class.java)
