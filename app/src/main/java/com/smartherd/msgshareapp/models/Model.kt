@@ -1,4 +1,4 @@
-package com.smartherd.msgshareapp.Models
+package com.smartherd.msgshareapp.models
 
 data class Hobby(var title: String)
 

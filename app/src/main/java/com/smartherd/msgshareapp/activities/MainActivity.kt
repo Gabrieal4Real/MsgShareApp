@@ -1,4 +1,4 @@
-package com.smartherd.msgshareapp.Activities
+package com.smartherd.msgshareapp.activities
 
 import android.content.Intent
 import android.os.Bundle
