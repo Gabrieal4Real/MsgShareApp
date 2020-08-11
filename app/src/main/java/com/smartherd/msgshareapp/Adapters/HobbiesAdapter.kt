@@ -25,7 +25,6 @@ class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) :
             }
 
             itemView.imgShare.setOnClickListener {
-
                 currentHobby?.let {
                     val message: String = currentHobby!!.title + " is your hobby"
                     val intent = Intent()

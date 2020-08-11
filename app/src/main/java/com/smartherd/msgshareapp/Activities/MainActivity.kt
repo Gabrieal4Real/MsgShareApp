@@ -22,9 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         nextactivitybutton.setOnClickListener {
             Log.d("", "Next Activity Button Clicked")
-
             val message: String = edittextnextactivity.text.toString()
-
             if (message.equals("")) {
                 showToast("Please Enter Message 1", Toast.LENGTH_LONG)
             } else {
@@ -38,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         sharetootherapp.setOnClickListener {
             Log.d("", "Share Button Clicked!")
             val message: String = edittextnextactivity.text.toString()
-
             if (message.equals("")) {
                 showToast("Please Enter Message 2")
             } else {
@@ -51,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerviewbutton.setOnClickListener {
-
             val message: String = edittextnextactivity.text.toString()
             if (message.equals("")) {
                 showToast("Please Enter Message 3")
