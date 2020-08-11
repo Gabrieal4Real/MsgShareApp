@@ -23,16 +23,16 @@ class MainActivity : AppCompatActivity() {
         showtoastbutton.setOnClickListener {
             //Code
             Log.d(TAG, "Toast Button Clicked!")
-            showToast("Toast Button Clicked!")
+            showToast(getString(R.string.toast_button_clicked))
         }
 
         nextactivitybutton.setOnClickListener {
             Log.d(TAG, "Next Activity Button Clicked")
             val message: String = edittextnextactivity.text.toString()
             if (message == "") {
-                showToast("Please Enter Message 1", Toast.LENGTH_LONG)
+                showToast(getString(R.string.NextActivityButtonClicked), Toast.LENGTH_LONG)
             } else {
-                showToast("Welcome $message")
+                showToast(getString(R.string.welcome) + message)
                 val intent = Intent(this, SecondActivity::class.java)
                 intent.putExtra(Constants.USER_MSG_KEY, message)
                 startActivity(intent)

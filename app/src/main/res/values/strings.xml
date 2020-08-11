@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MsgShareApp</string>
+    <string name="show_toast">Show Toast</string>
+    <string name="go_next_activity">Go Next Activity</string>
+    <string name="enter_your_message">Enter your message</string>
+    <string name="share_to_another_apps">Share to Another Apps</string>
+    <string name="recycler_view_button">Recycler View Button</string>
+    <string name="sup">Sup</string>
+    <string name="title">Title</string>
+    <string name="toast_button_clicked">Toast Button Clicked!</string>
+    <string name="NextActivityButtonClicked">Please Enter Message 1</string>
+    <string name="welcome">Welcome</string>
 </resources>

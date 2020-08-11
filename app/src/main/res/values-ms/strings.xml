@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MsgShareApp</string>
+    <string name="show_toast">Tunjuk Toast</string>
+    <string name="go_next_activity">Pergi Aktiviti Selanjutnya</string>
+    <string name="enter_your_message">Masukkan mesej anda</string>
+    <string name="share_to_another_apps">Kongsi ke Aplikasi Lain</string>
+    <string name="recycler_view_button">Butang Pandangan Kitar Semula</string>
+    <string name="sup">Sup</string>
+    <string name="title">Tajuk</string>
+    <string name="toast_button_clicked">Butang Toast Diklik!</string>
+    <string name="NextActivityButtonClicked">Sila Masukkan Mesej 1</string>
+    <string name="welcome">Selamat datang </string>
+</resources>
