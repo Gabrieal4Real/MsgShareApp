@@ -5,38 +5,44 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.smartherd.msgshareapp.Constants
 import com.smartherd.msgshareapp.R
 import com.smartherd.msgshareapp.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        val TAG: String = MainActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         showtoastbutton.setOnClickListener {
             //Code
-            Log.d("", "Toast Button Clicked!")
+            Log.d(TAG, "Toast Button Clicked!")
             showToast("Toast Button Clicked!")
         }
 
         nextactivitybutton.setOnClickListener {
-            Log.d("", "Next Activity Button Clicked")
+            Log.d(TAG, "Next Activity Button Clicked")
             val message: String = edittextnextactivity.text.toString()
-            if (message.equals("")) {
+            if (message == "") {
                 showToast("Please Enter Message 1", Toast.LENGTH_LONG)
             } else {
-                showToast("Welcome " + message)
+                showToast("Welcome $message")
                 val intent = Intent(this, SecondActivity::class.java)
-                intent.putExtra("user_name", message)
+                intent.putExtra(Constants.USER_MSG_KEY, message)
                 startActivity(intent)
             }
         }
 
         sharetootherapp.setOnClickListener {
-            Log.d("", "Share Button Clicked!")
+            Log.d(TAG, "Share Button Clicked")
             val message: String = edittextnextactivity.text.toString()
-            if (message.equals("")) {
+            if (message == "") {
                 showToast("Please Enter Message 2")
             } else {
                 val intent = Intent()
@@ -48,8 +54,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerviewbutton.setOnClickListener {
+            Log.d(TAG, "Recycler Button Clicked")
             val message: String = edittextnextactivity.text.toString()
-            if (message.equals("")) {
+            if (message == "") {
                 showToast("Please Enter Message 3")
             } else {
                 val intent = Intent(this, HobbiesActivity::class.java)
