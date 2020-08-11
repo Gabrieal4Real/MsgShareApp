@@ -3,9 +3,9 @@ package com.smartherd.msgshareapp.Activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.smartherd.msgshareapp.R
+import com.smartherd.msgshareapp.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,8 +16,7 @@ class MainActivity : AppCompatActivity() {
         showtoastbutton.setOnClickListener {
             //Code
             Log.d("", "Toast Button Clicked!")
-
-            Toast.makeText(this, "Toast Button Clicked!", Toast.LENGTH_SHORT).show()
+            showToast("Toast Button Clicked!")
         }
 
         nextactivitybutton.setOnClickListener {
@@ -26,9 +25,9 @@ class MainActivity : AppCompatActivity() {
             val message: String = edittextnextactivity.text.toString()
 
             if (message.equals("")) {
-                Toast.makeText(this, "Please Enter Message 1", Toast.LENGTH_SHORT).show()
+                showToast("Please Enter Message 1")
             } else {
-                Toast.makeText(this, "Welcome " + message, Toast.LENGTH_SHORT).show()
+                showToast("Welcome " + message)
                 val intent = Intent(this, SecondActivity::class.java)
                 intent.putExtra("user_name", message)
                 startActivity(intent)
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             val message: String = edittextnextactivity.text.toString()
 
             if (message.equals("")) {
-                Toast.makeText(this, "Please Enter Message 2", Toast.LENGTH_SHORT).show()
+                showToast("Please Enter Message 2")
             } else {
                 val intent = Intent()
                 intent.action = Intent.ACTION_SEND
@@ -54,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
             val message: String = edittextnextactivity.text.toString()
             if (message.equals("")) {
-                Toast.makeText(this, "Please Enter Message 3", Toast.LENGTH_SHORT).show()
+                showToast("Please Enter Message 3")
             } else {
                 val intent = Intent(this, HobbiesActivity::class.java)
                 startActivity(intent)

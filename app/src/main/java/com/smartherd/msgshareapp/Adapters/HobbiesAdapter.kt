@@ -5,10 +5,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.smartherd.msgshareapp.Models.Hobby
 import com.smartherd.msgshareapp.R
+import com.smartherd.msgshareapp.showToast
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) :
@@ -19,8 +19,7 @@ class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) :
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(context, currentHobby!!.title + " is your hobby", Toast.LENGTH_SHORT)
-                    .show()
+                context.showToast(currentHobby!!.title + " is your hobby")
             }
 
             itemView.imgShare.setOnClickListener {
