@@ -11,12 +11,22 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         val bundle: Bundle? = intent.extras
-        val message = bundle!!.getString("user_name")
 
-        for (i in 0..5) {
-            println(message + i)
-            nameshowtext.text = "Hello " + message
-            //hello
+
+        //Safe Call                 ?.
+        //Safe Call with let        ?.let{}
+        //to make code more robust
+
+
+        bundle?.let {
+            val message = bundle.getString("user_name")
+
+            for (i in 0..2) {
+                println(message + i)
+                nameshowtext.text = "Hello " + message
+                //hello
+            }
         }
+
     }
 }
